@@ -1,8 +1,8 @@
+import json
 import random
+import requests
 
 from flask import Flask
-from flask import jsonify
-from flask import render_template
 
 app = Flask(__name__)
 
@@ -17,4 +17,11 @@ def enlighten_me():
 
 	file.close()
 
-	return jsonify(text = random.choice(quotes))
+	quote   = random.choice(quotes)
+	payload = { "text" : quote }
+	payload = json.dumps(payload)
+	
+	slack_webhook_url = "https://hooks.slack.com/services/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"
+	requests.post(slack_webhook_url, data = payload, headers = { 'Content-type': 'application/json' })
+
+	return quote
