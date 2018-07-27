@@ -17,4 +17,4 @@ def enlighten_me():
 
 	file.close()
 
-	return jsonify(quote = random.choice(quotes))
+	return jsonify(text = random.choice(quotes))
