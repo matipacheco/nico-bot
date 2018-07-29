@@ -28,7 +28,7 @@ def enlighten_me():
 
 	return ('', 204)
 
-@app.route('/enlighten_me_json')
+@app.route('/enlighten_me_json', methods = ('GET', 'POST'))
 def enlighten_me_json():
 	quotes = []
 	file   = open("misunderstood_wisdom.txt", "r")
