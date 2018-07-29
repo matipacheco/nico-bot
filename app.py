@@ -9,7 +9,7 @@ from flask import jsonify
 app = Flask(__name__)
 
 
-@app.route('/enlighten_me')
+@app.route('/enlighten_me', methods = ('GET', 'POST'))
 def enlighten_me():
 	quotes = []
 	file   = open("misunderstood_wisdom.txt", "r")
