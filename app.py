@@ -26,7 +26,7 @@ def enlighten_me():
 	slack_webhook_url = "https://hooks.slack.com/services/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"
 	requests.post(slack_webhook_url, data = payload, headers = { 'Content-type': 'application/json' })
 
-	return ''
+	return ('', 204)
 
 @app.route('/enlighten_me_json')
 def enlighten_me_json():
@@ -38,6 +38,6 @@ def enlighten_me_json():
 
 	file.close()
 
-	quote   = random.choice(quotes)
+	quote = random.choice(quotes)
 
 	return jsonify(text = quote)
