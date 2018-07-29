@@ -15,4 +15,5 @@ Para deployar, simplemente:
 
 ### Levantar aplicación
 `export FLASK_APP=app.py`
+
 `flask run`
