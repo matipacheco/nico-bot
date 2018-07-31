@@ -21,4 +21,4 @@ def enlighten_me():
 
 	quote   = random.choice(quotes)
 	
-	return jsonify(text = quote, response_type = "in_channel", replace_original = True, delete_original = True)
+	return jsonify(text = quote, response_type = "in_channel", delete_original = True)
