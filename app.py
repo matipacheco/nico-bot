@@ -4,7 +4,6 @@ import requests
 
 from flask import Flask
 from flask import jsonify
-from flask import request
 
 
 app = Flask(__name__)
@@ -12,7 +11,6 @@ app = Flask(__name__)
 
 @app.route('/enlighten_me', methods = ('GET', 'POST'))
 def enlighten_me():
-	print(request.form.to_dict())
 	quotes = []
 	file   = open("misunderstood_wisdom.txt", "r")
 	
