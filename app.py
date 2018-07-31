@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/enlighten_me', methods = ('GET', 'POST'))
 def enlighten_me():
-	print(request.args.iterlists())
+	print(request.form.to_dict())
 	quotes = []
 	file   = open("misunderstood_wisdom.txt", "r")
 	
