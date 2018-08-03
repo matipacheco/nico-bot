@@ -19,7 +19,7 @@ def enlighten_me():
 	text   = unidecode.unidecode(text)
 	words  = text.split(" ")
 	
-	valid_words = ["podria", "puedo", "podemos", "podriamos"]
+	valid_words = ["podria", "puedo", "podemos", "podriamos", "puede"]
 
 	if (set(valid_words) & set(words)):
 		file = open("absolutely_no.txt", "r")
