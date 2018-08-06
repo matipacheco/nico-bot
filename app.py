@@ -17,7 +17,7 @@ def enlighten_me():
 
 	text   = request.form.get("text").lower()
 	text   = unidecode.unidecode(text)
-	words  = text.split(" ")
+	text   = text.replace("_","").replace("*","").replace("¿","").replace("?","").replace("!","").replace("¡","").replace("~","")
 	
 	valid_words = ["podria", "puedo", "podemos", "podriamos", "puede"]
 
